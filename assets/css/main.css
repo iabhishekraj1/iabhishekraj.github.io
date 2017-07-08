@@ -1,0 +1,412 @@
+/*
+1200px
+992px;
+767px;
+640px;
+480px;
+320px;
+*/
+
+body {
+    background: url(../images/BG/Office-HD-Wallpapers-16.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+header p {
+    text-align: right;
+    padding: 20px;
+}
+
+#menu_container {
+    position: relative;
+    /*    border: 1px solid red;*/
+}
+
+#txt_menu {
+    font-size: 26px;
+    font-weight: bolder;
+    text-align: right;
+    text-decoration: none;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+}
+
+#menu {
+    padding-top: 60px;
+    background: rgba(21, 21, 243, 0.6);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    z-index: 100;
+    display: none;
+}
+
+#menu h3 {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 80px;
+    color: white;
+    padding: 5px;
+}
+
+#menu h3 a {
+    text-decoration: none;
+    color: white;
+}
+
+#menu h3 a:hover {
+    color: red;
+}
+
+#content {
+    padding-top: 100px;
+}
+
+#overlay {
+    background: rgba(23, 38, 23, 0.3);
+    padding-bottom: 100px;
+}
+
+#content #introduction {
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url(../images/background_style.png);
+    background-size: 100% 100%;
+    width: 55%;
+    margin: auto;
+    /*    padding-top: 100px;*/
+    padding: 110px 0px 50px;
+}
+
+#introduction #my_pic {
+    padding-top: 50px;
+    width: 40%;
+    text-align: center;
+}
+
+#introduction #about_me {
+    width: 58%;
+    padding-top: 50px;
+    /*    border: 1px solid;*/
+}
+
+#about_me h3 {
+    font-size: 30px;
+    color: blue;
+    font-weight: 700;
+    font-family: 'Rubik', sans-serif;
+}
+
+#about_me p {
+    color: brown;
+    font-size: 20px;
+}
+
+#introduction img {
+    border-radius: 50%;
+    height: 230px;
+    width: 230px;
+    /*    border: 1px solid black;*/
+    box-shadow: 2px 2px 2px #9C92A3, -2px -2px 2px #9C92A3, 2px -2px 2px #9C92A3, -2px 2px 2px #9C92A3;
+}
+
+.section_head {
+    padding-top: 100px;
+    font-size: 50px;
+    text-align: center;
+    color: white;
+    text-shadow: 3px 3px 2px blue, 3px -3px 2px blue;
+    font-weight: 600;
+    font-family: 'Rubik', sans-serif;
+    /*    background-color: white;*/
+}
+
+#key_skills_head {
+    padding: 30px 120px 30px;
+    border-radius: 50%;
+    animation: key_skills_head_anim 8s infinite linear;
+}
+
+@keyframes key_skills_head_anim {
+    0% {
+        background: rgba(255, 255, 255, 0.7);
+        border: 2px solid black;
+    }
+    50% {
+        background: rgba(126, 126, 126, 0.7);
+        border: 2px solid white;
+    }
+    75% {
+        background: rgba(0, 0, 0, 0.7);
+        border: 2px solid white;
+    }
+    100% {
+        background: rgba(255, 255, 255, 0.7);
+        border: 2px solid black;
+    }
+}
+
+#key_skills,
+#projects {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#content .key_skill {
+    width: 29%;
+    background-image: url('../images/back/bgimg.png');
+    height: 500px;
+    margin: 80px 25px 0px 30px;
+    background-size: 100% 100%;
+    position: relative;
+    color: white;
+}
+
+#key_skills .div_content,
+#projects .div_content {
+    position: absolute;
+    top: 20%;
+    overflow-y: scroll;
+    height: 80%;
+    text-align: center;
+    padding: 25px 0px 40px;
+}
+
+.div_content::scrollbar {
+    width: 0.6em;
+}
+
+.div_content::-webkit-scrollbar {
+    width: 0.6em;
+}
+
+.div_content::-moz-scrollbar {
+    width: 0.6em;
+}
+
+.div_content::scrollbar-thumb {
+    background-color: grey;
+    border-radius: 10px;
+    -webkit-box-shadow: inset 1px 1px 15px rgba(255, 255, 255, 1);
+}
+
+.div_content::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0px 0px 15px rgba(255, 255, 255, 1);
+}
+
+.div_content::-moz-scrollbar-thumb {
+    background-color: black;
+    border-radius: 10px;
+    -moz-box-shadow: inset 0px 0px 15px rgba(255, 255, 255, 1);
+}
+
+.div_content::scrollbar-track {
+    background-color: white;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.8);
+}
+
+.div_content::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.8);
+}
+
+.div_content::-moz-scrollbar-track {
+    background-color: white;
+    -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.8);
+}
+
+#key_skills .div_content img,
+#projects .div_content img {
+    height: 50%;
+    width: 70%;
+    padding-bottom: 30px;
+}
+
+#key_skills h3 {
+    font-size: 29px;
+    font-family: 'Rubik', sans-serif;
+    color: white;
+    text-align: center;
+    padding-top: 40px;
+}
+
+
+/*
+#key_skills .div_content p {
+    color: black;
+    text-align: justify;
+    font-family: 'Open Sans', sans-serif;
+}*/
+
+#projects_head {
+    padding: 30px 120px 30px;
+    border-radius: 50%;
+    animation: projects_head_anim 5s infinite linear;
+}
+
+@keyframes projects_head_anim {
+    0% {
+        background: rgba(210, 77, 87, 0.7);
+        border: 2px solid white;
+    }
+    50% {
+        background: rgba(255, 255, 255, 0.6);
+        border: 2px solid #d24d57;
+    }
+    100% {
+        background: rgba(210, 77, 87, 0.7);
+        border: 2px solid white;
+    }
+}
+
+#content .project {
+    width: 29%;
+    height: 500px;
+    margin: 80px 25px 0px 30px;
+    background-size: 100% 100%;
+    position: relative;
+}
+
+#content .project:nth-child(odd) {
+    background-image: url('../images/back/16.png');
+}
+
+#content #projects:nth-child(odd) h3 {
+    color: black;
+    font-size: 29px;
+    font-family: 'Rubik', sans-serif;
+    text-align: center;
+    padding-top: 40px;
+}
+
+#content .project:nth-child(odd) p {
+    color: #050709;
+    text-align: justify;
+    padding: 0px 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+}
+
+#content .project:nth-child(even) {
+    background-image: url('../images/back/15.png');
+}
+
+#content #projects:nth-child(even) h3 {
+    font-family: 'Rubik', sans-serif;
+    font-size: 29px;
+    color: deeppink;
+    text-align: center;
+    padding-top: 40px;
+}
+
+#content .project:nth-child(even) p {
+    color: black;
+    text-align: justify;
+    padding: 0px 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+}
+
+@media screen and (max-width: 992px) {
+    #content #introduction {
+        width: 70%;
+        margin: auto;
+        padding: 110px 0px 50px;
+    }
+    #introduction img {
+        height: 200px;
+        width: 200px;
+    }
+    #content .key_skill,
+    #content .project {
+        width: 39%;
+        margin: 80px 54px 0px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #content #introduction {
+        width: 80%;
+        margin: auto;
+        padding: 110px 0px 50px;
+    }
+    #content .key_skill,
+    #content .project {
+        width: 53%;
+        margin: 80px 50px 0px 180px;
+    }
+    .section_head {
+        padding-top: 100px;
+        font-size: 44px;
+        font-weight: 400;
+    }
+    #key_skills_head {
+        padding: 30px 80px;
+    }
+    #projects_head {
+        padding: 30px 80px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    #content #introduction {
+        padding: 80px 0px 50px;
+    }
+    #introduction img {
+        height: 180px;
+        width: 180px;
+    }
+    #introduction #my_pic {
+        padding-top: 60px;
+    }
+    #about_me h3 {
+        font-size: 24px;
+    }
+    #about_me p {
+        color: brown;
+        font-size: 18px;
+    }
+    .section_head {
+        padding-top: 100px;
+        font-size: 44px;
+        font-weight: 400;
+    }
+    #key_skills_head {
+        padding: 30px 80px;
+    }
+    #projects_head {
+        padding: 30px 80px;
+    }
+    #content .key_skill,
+    #content .project {
+        width: 65%;
+        margin: 80px 50px 0px 120px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #introduction #my_pic {
+        width: 100%;
+    }
+    #introduction #about_me {
+        width: 100%;
+        text-align: center;
+        padding-top: 20px;
+    }
+    #content .key_skill,
+    #content .project {
+        width: 80%;
+        margin: 80px 50px 0px 60px;
+    }
+}
