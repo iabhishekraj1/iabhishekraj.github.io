@@ -1,0 +1,358 @@
+body {
+    overflow-x: hidden;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.clearfix:after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+.inline {
+    display: inline;
+}
+
+#content {
+    /* #066093;  */
+    background: #166896;
+}
+
+.body-overlay {
+    display: none;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+#content .container {
+    position: relative;
+}
+
+.nav-item {
+    margin-right: 50px;
+}
+
+.nav-link {
+    color: white;
+    font-size: 24px;
+    font-family: Adobe Ming Std L;
+}
+
+.nav-link:hover {
+    color: white;
+}
+
+.fa-download {
+    font-size: 18px;
+}
+#my-pic img {
+    height: 93.5vh;
+}
+
+.my-intro {
+    margin: 10em 0;
+    padding: 4em 4em;
+    
+}
+
+.my-intro h3 {
+    font-family: Abadi;
+    font-size: 26px;
+    color: #066093;
+    background: white;
+    display: inline-block;
+    padding: 2px 6px;
+    border-radius: 7px;
+    margin-bottom: 18px;
+    position: relative;
+}
+
+.my-intro h3:after {
+    content: '';
+    position: absolute;
+    left: 43%;
+    bottom: -14px;
+    border-left: 0px solid transparent;
+    border-right: 11px solid transparent;
+    border-bottom: 14px solid #FFF;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+}
+
+.my-intro h2 {
+    color: white;
+    font-family: Gabriola;
+    font-size: 40px;
+    margin: 0;
+}
+
+.my-intro p {    
+    font-size: 15px;
+    color: white;    
+    font-family: Adobe Ming Std L;
+}
+
+/* about styling */
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 93vh;
+    background: rgba(0, 0, 0, 0.8)
+}
+
+#other-details {
+    border: 3px solid;
+    position: relative;
+}
+
+.aboutme {
+    height: 93vh;
+    background: url(../images/back.jpg);
+    padding-top: 22px;
+}
+
+.aboutme h4 {
+    text-align: center;
+    color: white;
+    font-size: 37px;
+    font-family: -webkit-pictograph;
+}
+
+.aboutme .left-section {
+    margin: 55px 0;
+    text-align: center;
+}
+
+.aboutme .right-section {
+    margin-top: 50px;
+    color: white;
+    /* border: 1px solid; */
+}
+
+.my-pic-about {
+    height: 350px;
+    width: 350px;
+    border: 4px solid cyan;
+    border-radius: 50%;
+}
+
+p.role {
+    padding-bottom: 12px;
+    border-bottom: 1px dashed white;
+}
+
+.aboutme .right-section h5 {
+    font-family: monospace;
+    font-size: 30px;
+}
+
+table.about-details {
+    margin: 40px 0;
+    font-size: 18px;
+}
+
+table.about-details tr td {
+    padding: 5px;
+}
+
+table.about-details tr td:first-child {
+    padding-right: 25px;
+    font-weight: bold;
+}
+
+table.about-details tr td:last-child {
+    padding-right: 22px;
+    font-weight: bold;
+}
+
+p.about-para {
+    text-align: justify;
+    color: white;
+    padding: 0 40px;
+    font-size: 18px;
+}
+
+.other-data-details {
+    position: absolute;
+    top: -100%;
+    width: 100%;
+    color: white;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.cross {
+    color: white;
+    position: absolute;
+    right: 36px;
+    top: -6px;
+    font-size: 29px;
+    cursor: pointer;
+}
+
+/* skill styling */
+
+.bg {
+    background: gray;
+    width: 100%;
+}
+
+.skill-section {
+    background-color: #b3315d;
+}
+
+/* animation: progress-bar-stripes 2s linear infinite; */
+
+.progress-bar-striped {
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+    background-size: 40px 40px;
+    height: 24px;
+    /* background-size: 40px 40px; */
+}
+
+.skill-details {
+    margin-bottom: 28px;
+}
+
+.skill-name {
+    text-align: left;
+}
+
+.skill-percentage {
+    text-align: right;
+}
+
+.education-details {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+
+.edu-left-section {
+    width: 30%;
+    /* padding: 10px; */
+    text-align: center;
+}
+
+.edu-right-section {
+    width: 70%;
+    padding: 10px;
+    text-align: center;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.2);
+    /* transform: rotate(-21deg); */
+    transform: translateX(200%);
+}
+
+.edu-right-section h4 {
+    font-size: 30px;
+}
+
+.edu-right-section p {
+    font-size: 18px;
+    margin-bottom: 2px;
+}
+
+.edu-year {
+    padding: 20px 0;
+    background: darkgoldenrod;
+    border: 1px solid white;
+}
+
+
+.map-address {
+    margin-left: 10px;
+}
+
+.map-address iframe {
+    height: 400px;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.label {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+.form-control {
+    width: 97%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    color: #d0cfcf;
+}
+
+.form-control:focus {
+    border-bottom: 1px solid white;
+    background: transparent;
+    box-shadow: none;
+    color: white;
+}
+
+.form-control:focus .label {
+    bottom: 10px;
+}
+
+/* working experience details */
+
+.experience-details {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+
+.exp-left-section {
+    width: 30%;
+    text-align: center;
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.exp-right-section {
+    width: 70%;
+    padding: 10px;
+    text-align: center;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate3d(15em, 10em, 15em);
+    opacity: 0;
+}
+
+.exp-right-section h4 {
+    font-size: 30px;
+}
+
+.exp-right-section p {
+    font-size: 18px;
+    margin-bottom: 2px;
+}
+
+.working-year {
+    padding: 20px 0;
+    background: darkgoldenrod;
+    border: 1px solid white;
+    font-size: 20px;
+    transition: 0.5s;
+}
+
+.working-year:hover {
+    background: transparent;
+    transition: 0.5s;
+    color: darkgoldenrod;
+}
