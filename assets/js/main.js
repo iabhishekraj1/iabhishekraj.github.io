@@ -2,7 +2,7 @@ $(window).ready(function () {
     setTimeout(function () {
         $('.loader').animate({
             opacity: "0"
-        }, 1000);
+        }, 900);
         $('#content').fadeIn();
     }, 1000)
 })
@@ -25,10 +25,11 @@ function aboutme() {
     rajDetails = true;
     screen = 0;
     $('.my-pic-about').animate({
-        top: "0%"
+        top: "-8%"
     }, 400);
     $('#about-details').animate({
-        top: "6%"
+        top: "6%",
+        // opacity: "1"
     }, 600);
     $('.body-overlay').css("display", "block");
 }
@@ -40,7 +41,8 @@ function skills() {
     rajDetails = true;
     screen = 1;
     $('#skills-details').animate({
-        top: "6%"
+        top: "6%",
+        // opacity: "1"
     }, 600);
 
     var tags = $('.skill-section');
@@ -50,7 +52,7 @@ function skills() {
         }, {
             step: function () {
                 $(this).css("width", skillset[key] + "%");
-                $(this).css('transition', '1.6s');
+                $(this).css('transition', '1.5s');
                 $(this).css('transition-delay', '.5s');
             }
         })
@@ -66,7 +68,8 @@ function experience() {
     rajDetails = true;
     screen = 2;
     $('#experience-details').animate({
-        top: "6%"
+        top: "6%",
+        // opacity: "1"
     }, 600);
     $('.body-overlay').css("display", "block");
 
@@ -121,28 +124,12 @@ function education() {
     });
 
     $('#education-details').animate({
-        top: "6%"
+        top: "6%",
+        // opacity: "1"
     }, 600);
     $('.body-overlay').css("display", "block");
 
 }
-
-// hover in animation
-// $('.education-details').hover(function () {
-//     // var a = $(this).find();
-//     // console.log("************", a);
-//     $(this).eq(0).animate({
-//         textIndent: 0
-//     }, {
-//         step: function () {
-//             $(this).css('transform', 'rotate(0deg) translateY(0px)');
-//             $(this).css('background', 'transparent');
-//             $(this).css('color', 'darkgoldenrod');
-//             $(this).css('transition', '0.3s');
-//             $(this).css('transition-delay', '0s');
-//         }
-//     });
-// })
 
 // contact link
 $('#contact-link').click(contact);
@@ -151,7 +138,8 @@ function contact() {
     rajDetails = true;
     screen = 4;
     $('#contact-details').animate({
-        top: "6%"
+        top: "6%",
+        // opacity: "1"
     }, 600);
     $('.body-overlay').css("display", "block");
 }
@@ -277,7 +265,8 @@ function cross() {
         top: "-120%"
     }, 600);
     $('#about-details').animate({
-        top: "-100%"
+        top: "-100%",
+        // opacity: "0"
     }, 600);
 
     $('.body-overlay').animate({
@@ -293,6 +282,7 @@ function cross() {
     // next
     $('#skills-details').animate({
         top: "-100%",
+        // opacity: "0"
     }, 600);
     var tags = $('.skill-section');
     $.each(tags, function (key, value) {
@@ -311,7 +301,8 @@ function cross() {
 
     // next
     $('#experience-details').animate({
-        top: "-100%",
+        top: "-120%",
+        // opacity: "0"
     }, 600);
 
     // edu
@@ -329,7 +320,7 @@ function cross() {
         textIndent: 0
     }, {
         step: function () {
-            $(this).css("transform", "translate3d(15em, 10em, 15em)");
+            $(this).css("transform", "translate3d(5em, 5em, 5em)");
             $(this).css('transition', '0.6s');
             $(this).css('transition-delay', '0.5s');
             $(this).css('opacity', '0');
@@ -340,12 +331,14 @@ function cross() {
     // contact
     $('#contact-details').animate({
         top: "-100%",
+        // opacity: "0"
     }, 600);
     $('.body-overlay').css("display", "none");
 
     // education
     $('#education-details').animate({
         top: "-100%",
+        // opacity: "0"
     }, 600);
 
     $('.edu-year').animate({
@@ -393,3 +386,8 @@ document.addEventListener("keyup", function (event) {
         cross();
     }
 });
+
+// 
+function contactUs(){
+    alert("Your message is successfully delivered!");
+}
