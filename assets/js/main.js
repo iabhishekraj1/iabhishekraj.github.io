@@ -1,3 +1,12 @@
+$(window).ready(function () {
+    setTimeout(function () {
+        $('.loader').animate({
+            opacity: "0"
+        }, 1000);
+        $('#content').fadeIn();
+    }, 1000)
+})
+
 var rajDetails = false;
 var screen = -1;
 var functionEnum = {
@@ -7,6 +16,7 @@ var functionEnum = {
     3: "education",
     4: "contact"
 };
+var skillset = ["60", "70", "50", "60", "70", "70", "80", "70", "85", "70", "60", "60"];
 // about me link
 
 $('#about-link').click(aboutme);
@@ -14,6 +24,9 @@ $('#about-link').click(aboutme);
 function aboutme() {
     rajDetails = true;
     screen = 0;
+    $('.my-pic-about').animate({
+        top: "0%"
+    }, 400);
     $('#about-details').animate({
         top: "6%"
     }, 600);
@@ -29,6 +42,20 @@ function skills() {
     $('#skills-details').animate({
         top: "6%"
     }, 600);
+
+    var tags = $('.skill-section');
+    $.each(tags, function (key, value) {
+        $('.skill-section').eq(key).animate({
+            textIndent: 0
+        }, {
+            step: function () {
+                $(this).css("width", skillset[key] + "%");
+                $(this).css('transition', '1.6s');
+                $(this).css('transition-delay', '.5s');
+            }
+        })
+    });
+
     $('.body-overlay').css("display", "block");
 }
 
@@ -246,9 +273,13 @@ $('.cross').click(cross);
 function cross() {
     rajDetails = false;
     screen = -1;
+    $('.my-pic-about').animate({
+        top: "-120%"
+    }, 600);
     $('#about-details').animate({
         top: "-100%"
     }, 600);
+
     $('.body-overlay').animate({
         textIndent: 0
     }, {
@@ -263,7 +294,20 @@ function cross() {
     $('#skills-details').animate({
         top: "-100%",
     }, 600);
+    var tags = $('.skill-section');
+    $.each(tags, function (key, value) {
+        $('.skill-section').eq(key).animate({
+            textIndent: 0
+        }, {
+            step: function () {
+                $(this).css("width", "0");
+                $(this).css('transition', '1s');
+                $(this).css('transition-delay', '0.5s');
+            }
+        })
+    });
     $('.body-overlay').css("display", "none");
+
 
     // next
     $('#experience-details').animate({
@@ -335,7 +379,7 @@ document.addEventListener("keyup", function (event) {
             screen = 4;
         } else {
             screen--;
-        }        
+        }
         setTimeout(window[functionEnum[screen]], 800);
         cross();
 
