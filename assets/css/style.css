@@ -1,3 +1,29 @@
+/* width */
+
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: rgba(1, 1, 1, 0.4);
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: gray;
+}
+
 body {
     overflow-x: hidden;
     background: #166896;
@@ -25,15 +51,14 @@ body {
 .loader {
     margin-top: 237px;
     position: absolute;
-    /* left: 46%; */
-    width:100%;
-    /* height: 100vh; */
+    width: 100%;
+    height: 100vh;
 }
 
 .loader img {
     height: 100px;
     width: 100px;
-    margin-left:45%; 
+    margin-left: 45%;
 }
 
 #content {
@@ -67,12 +92,61 @@ body {
     color: white;
 }
 
+/* mobile navigation view */
+
+.mobile-nav-button {
+    background: #333548;
+    text-align: center;
+    height: 50px;
+    display: none;
+}
+
+.mobile-nav-button .mobile {
+    padding: 4px;
+    display: inline-block;
+    background: white;
+    position: absolute;
+    right: 33px;
+    top: 4px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 50px;
+}
+
+.mobile-nav-button span {
+    border: 1px solid #306f1c;
+    display: block;
+    width: 42px;
+    height: 2px;
+    margin: 7px 0;
+}
+
+.mobile-menu-cross i {
+    color: #306f1c;
+    font-size: 31px;
+    margin: 1px auto;
+}
+
+/* mobile nav */
+
+.mobile-nav {
+    list-style: none;
+    display: none;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.mobile-nav-item {
+    text-align: center;
+}
+
+/* mobile navigation view end */
+
 .fa-download {
     font-size: 18px;
 }
 
 #my-pic img {
-    height: 90vh;    
+    height: 93.5vh;
 }
 
 .my-intro {
@@ -122,7 +196,6 @@ body {
 .overlay {
     position: absolute;
     width: 100%;
-    height: 93vh;
     background: rgba(0, 0, 0, 0.7)
 }
 
@@ -132,49 +205,50 @@ body {
     border-radius: 3px;
 }
 
-.aboutme {
-    height: 93vh;
+.mydetails {
     background: url(../images/back.jpg);
     padding-top: 22px;
+    padding-bottom: 22px;
 }
 
-.aboutme h4 {
+.mydetails h4 {
     text-align: center;
     color: white;
     font-size: 37px;
     font-family: -webkit-pictograph;
 }
 
-.aboutme .left-section {
+.mydetails .left-section {
     margin: 55px 0;
     text-align: center;
     position: relative;
 }
 
-.aboutme .right-section {
+.mydetails .right-section {
     margin-top: 50px;
     color: white;
     /* border: 1px solid; */
 }
 
+.aboutme-my-pic {
+    transform: translateY(-200%);
+    transition: 1.5s;
+}
+
 .my-pic-about {
-    height: 320px;
-    width: 320px;
+    height: 250px;
+    width: 250px;
     border: 1px solid gray;
     border-radius: 50%;
-    box-shadow: none;
     transition: 0.8s;
     box-shadow: 0.5px 0.5px 0px gray;
-    position: absolute;
-    left: 75px;
-    top: -120%;
 }
 
 .my-pic-about:hover {
     border: 1px solid gray;
     transition: 0.8s;
-    /* box-shadow: 1px 1px 80px gray; */
-    transform: scale(1.1)
+    transform: scale(1.1);
+    border-radius: 5px;
 }
 
 p.role {
@@ -183,7 +257,7 @@ p.role {
     font-family: Adobe Ming Std L;
 }
 
-.aboutme .right-section h5 {
+.mydetails .right-section h5 {
     font-family: monospace;
     font-size: 30px;
 }
@@ -211,25 +285,17 @@ p.about-para {
     text-align: justify;
     color: white;
     padding: 0 40px;
-    font-size: 30px;    
+    font-size: 18px;
 }
 
 .other-data-details {
     position: absolute;
-    top: -120%;
+    top: -200%;
+    left: 0;
     width: 100%;
     color: white;
     z-index: 2;
-    /* overflow: hidden; */
-}
-.skills-details-canvas{
-    height: 100%;
-    width: 100%;
-    top: 0%;
-    left: 0;
-    background: rgba(0,0,0,0.1);
-    position: absolute;
-    z-index: 1;
+    overflow: hidden;
 }
 
 .cross {
@@ -238,17 +304,18 @@ p.about-para {
     right: 36px;
     top: -6px;
     font-size: 29px;
-    cursor: pointer;    
+    cursor: pointer;
 }
 
 /* skill styling */
+
 .bg {
     background: gray;
     width: 100%;
 }
 
 .skill-section {
-    background-color: #6f1135;
+    background-color: #861641;
     width: 0;
 }
 
@@ -360,7 +427,7 @@ p.about-para {
     width: 30%;
     text-align: center;
     opacity: 0;
-    transform: translateX(-50%);
+    transform: translateX(-100%);
 }
 
 .exp-right-section {
@@ -369,7 +436,7 @@ p.about-para {
     text-align: center;
     z-index: 10;
     background: rgba(255, 255, 255, 0.2);
-    transform: translate3d(5em, 5em, 5em);
+    transform: translate3d(15em, 10em, 15em);
     opacity: 0;
 }
 
@@ -394,4 +461,193 @@ p.about-para {
     background: transparent;
     transition: 0.5s;
     color: darkgoldenrod;
+}
+
+/* media query 992 px */
+
+@media screen and (min-width: 767px) and (max-width: 992px) {
+    .nav-item {
+        margin-right: 33px;
+    }
+}
+
+@media screen and (min-width: 575px) and (max-width: 768px) {
+    .nav-item {
+        margin-right: 7px;
+    }
+    .nav-link {
+        font-size: 20px;
+    }
+    .my-pic-about:hover {
+        border: 1px solid gray;
+        transition: 0.8s;
+        transform: scale(1.05);
+        border-radius: 3px;
+    }
+    table.about-details {
+        margin-top: 15px;
+        margin-bottom: 40px;
+    }
+    .offset-sm-2 {
+        margin-left: 5%;
+    }
+    .col-sm-8 {
+        flex: 0 0 90%;
+        max-width: 90%;
+    }
+    .exp-right-section h4 {
+        font-size: 28px;
+    }
+    .edu-right-section h4 {
+        font-size: 26px;
+    }
+    .edu-year {
+        /* transform: rotate(-20deg) translateY(36px); */
+        font-size: 26px;
+    }
+}
+
+@media screen and (min-width: 479px) and (max-width: 576px) {
+    .nav-item {
+        display: none;
+    }
+    .mobile-nav-button {
+        display: block;
+    }
+    .nav-link {
+        font-size: 20px;
+    }
+    .nav-link:hover {
+        color: black;
+    }
+    /* about us page */
+    .my-pic-about:hover {
+        border: 1px solid gray;
+        transition: 0.8s;
+        transform: scale(1.05);
+        border-radius: 3px;
+    }
+    .col-sm-5 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .col-sm-7 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .mydetails .right-section {
+        margin-top: 0px;
+    }
+    .right-section h5 {
+        text-align: center;
+    }
+    .right-section .role {
+        text-align: center;
+        font-size: 18px;
+    }
+    table.about-details {
+        width: 80%;
+        margin: auto;
+        margin-bottom: 40px;
+    }
+    table.about-details tr {
+        box-shadow: 0px 0px 10px aquamarine;
+    }
+    table.about-details tr td {
+        border: 1px solid;
+    }
+    /* skills page */
+    .offset-sm-1 {
+        margin-left: 5%;
+    }
+    .col-sm-4 {
+        flex: 0 0 90%;
+        max-width: 90%;
+    }
+    .col-sm-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .mydetails .left-section {
+        margin: 35px 0;
+    }
+    .map-address {
+        width: 90%;
+        margin: auto;
+    }
+    .contact-form {
+        width: 90%;
+        margin: auto;
+    }
+    #my-pic {
+        text-align: center;
+    }
+    .my-intro {
+        margin: 0;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 359px) and (max-width: 480px) {
+    .exp-left-section {
+        width: 25%;
+        margin-left: 2%;
+    }
+    .working-year {
+        padding: 20px 1px;
+    }
+    .edu-left-section {
+        width: 25%;
+        margin-left: 2%;
+    }
+}
+
+@media screen and (min-width: 321px) and (max-width: 360px) {
+    .nav-item {
+        display: none;
+    }
+    .mobile-nav-button {
+        display: block;
+    }
+    #my-pic img {
+        height: 80vh;
+    }
+    .my-intro {
+        margin: 0;
+        text-align: center;
+    }
+    .my-intro h2 {
+        font-size: 38px;
+    }
+    .right-section h5 {
+        text-align: center;
+    }
+    .right-section .role {
+        text-align: center;
+        font-size: 18px;
+    }
+    table.about-details {
+        width: 80%;
+        margin: auto;
+        margin-bottom: 40px;
+        font-size: 16px;
+        font-weight: 100;
+    }
+    table.about-details tr {
+        box-shadow: 0px 0px 10px aquamarine;
+    }
+    table.about-details tr td {
+        border: 1px solid;
+    }
+    p.about-para{
+        padding: 0 20px;
+    }
+    .mydetails .right-section{
+        width: 94%;
+        margin: auto;
+    }
+    .map-address {        
+        width: 95%;
+        margin: auto;
+    }   
 }

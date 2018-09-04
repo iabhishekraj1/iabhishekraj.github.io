@@ -21,27 +21,62 @@
         <img src="./assets/images/loader.gif" alt="loader not available">
     </div>
     <div id="content" style="display:none">
+        <div class="mobile-nav-button">
+            <div class="mobile mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="mobile mobile-menu-cross" style="display:none">
+                <i class="far fa-times-circle"></i>
+            </div>
+        </div>
         <div class="container">
             <!-- nav bar  -->
             <div class="row" id="landing-page">
                 <div class="col-sm-12">
                     <ul class="nav">
                         <li class="nav-item">
-                            <a class="nav-link" id="about-link" href="#">About</a>
+                            <a class="nav-link mobile-nav-item nav-about-link" href="#">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" id="skill-link" href="#">Skills</a>
+                            <a class="nav-link mobile-nav-item nav-skill-link"href="#">Skills</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" id="experience-link" href="#">Experience</a>
+                            <a class="nav-link mobile-nav-item nav-experience-link" href="#">Experience</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" id="education-link" href="#">Education</a>
+                            <a class="nav-link mobile-nav-item nav-education-link" href="#">Education</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" id="contact-link" href="#">Contact</a>
+                            <a class="nav-link mobile-nav-item nav-contact-link" href="#">Contact</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link mobile-nav-item" href="./assets/A_Raj_Resume.pdf" download="Abhishek_Raj">
+                                Get Resume
+                                <i class="fas fa-download">
+                                </i>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="mobile-nav">
+                        <li class="mobile-nav-item">
+                            <a class="nav-link nav-about-link" href="#">About</a>
+                        </li>
+                        <li class="mobile-nav-item">
+                            <a class="nav-link nav-skill-link"href="#">Skills</a>
+                        </li>
+                        <li class="mobile-nav-item">
+                            <a class="nav-link nav-experience-link" href="#">Experience</a>
+                        </li>
+                        <li class="mobile-nav-item">
+                            <a class="nav-link nav-education-link" href="#">Education</a>
+                        </li>
+                        <li class="mobile-nav-item">
+                            <a class="nav-link nav-contact-link" href="#">Contact</a>
+                        </li>
+                        <li class="mobile-nav-item">
                             <a class="nav-link" href="./assets/A_Raj_Resume.pdf" download="Abhishek_Raj">
                                 Get Resume
                                 <i class="fas fa-download">
@@ -71,7 +106,7 @@
                     <div class="col-sm-12">
                         <div id="other-details">
                             <div class="overlay"></div>
-                            <div class="aboutme">
+                            <div class="mydetails">
                                 <div class="row">
                                     <div class="col-sm-12">
                                         <div class="cross">
@@ -80,8 +115,9 @@
                                         <h4>About Me</h4>
                                     </div>
                                     <div class="left-section col-sm-5">
-                                        <img src="./assets/images/itsme.jpg" alt="my pic" class="my-pic-about">
-                                        <!-- <p>this is image part</p> -->
+                                        <div class="col aboutme-my-pic">
+                                            <img src="./assets/images/itsme.jpg" alt="my pic" class="my-pic-about">
+                                        </div>
                                     </div>
                                     <div class="right-section col-sm-7">
                                         <h5>Hi, i'm
@@ -117,16 +153,16 @@
                                         <p class="about-para">I am someone who is mature, candid and who has integrity. Everyday I work to improve
                                             myself and my skills which is part of maturing and becoming better at what I
                                             do.
-                                        </p>                                        
+                                        </p>
+                                        <p class="about-para">Aliquam aliquet sapien quis mauris semper suscipit. Maecenas pharetra dapibus posuere.
+                                            Praesent odio sem, varius quis dolor vel, maximus dapibus mi. Pellentesque mattis
+                                            mauris neque. Nam aliquam turpis ante, at cursus massa ullamcorper ut</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- <canvas class="skills-details-canvas">
-
-                </canvas> -->
             </div>
 
             <!-- skills -->
@@ -135,7 +171,7 @@
                     <div class="col-sm-12">
                         <div id="other-details">
                             <div class="overlay"></div>
-                            <div class="aboutme">
+                            <div class="mydetails">
                                 <div class="row">
                                     <div class="col-sm-12">
                                         <div class="cross">
@@ -345,7 +381,7 @@
                     <div class="col-sm-12">
                         <div id="other-details">
                             <div class="overlay"></div>
-                            <div class="aboutme">
+                            <div class="mydetails">
                                 <div class="row">
                                     <div class="col-sm-12">
                                         <div class="cross">
@@ -408,7 +444,7 @@
                     <div class="col-sm-12">
                         <div id="other-details">
                             <div class="overlay"></div>
-                            <div class="aboutme">
+                            <div class="mydetails">
                                 <div class="row">
                                     <div class="col-sm-12">
                                         <div class="cross">
@@ -475,7 +511,7 @@
                     <div class="col-sm-12">
                         <div id="other-details">
                             <div class="overlay"></div>
-                            <div class="aboutme">
+                            <div class="mydetails">
                                 <div class="row">
                                     <div class="col-sm-12">
                                         <div class="cross">
@@ -493,7 +529,7 @@
                                         </div>
                                     </div>
                                     <div class="right-section col-sm-6">
-                                        <form action="#">
+                                        <form class="contact-form" action="#">
                                             <div class="form-group">
                                                 <input type="text" class="form-control" id="contact-name">
                                                 <label class="label" id="contact-name-label" for="">Name:</label>
@@ -510,7 +546,7 @@
                                                 <textarea class="form-control rounded-0" rows="6" id="contact-message"></textarea>
                                                 <label class="label" for="email" id="contact-message-label">Message:</label>
                                             </div>
-                                            <button type="button" class="btn btn-default" onclick="contactUs()">Submit</button>
+                                            <button type="submit" class="btn btn-default">Submit</button>
                                         </form>
                                     </div>
                                 </div>

@@ -1,11 +1,17 @@
 $(window).ready(function () {
+    // alert("height" + document.documentElement.scrollHeight);
+    // alert("width" + $( document ).width());
     setTimeout(function () {
         $('.loader').animate({
-            opacity: "0"
-        }, 900);
+            textIndent: 0
+        }, {
+            step: function () {
+                $(this).css("display", "none");
+            }
+        }, 6000);
         $('#content').fadeIn();
     }, 1000)
-})
+});
 
 var rajDetails = false;
 var screen = -1;
@@ -17,32 +23,55 @@ var functionEnum = {
     4: "contact"
 };
 var skillset = ["60", "70", "50", "60", "70", "70", "80", "70", "85", "70", "60", "60"];
-// about me link
 
-$('#about-link').click(aboutme);
+// about me link
+$('.nav-about-link').click(aboutme);
 
 function aboutme() {
+    crossMobileMenu();
     rajDetails = true;
     screen = 0;
     $('.my-pic-about').animate({
         top: "-8%"
     }, 400);
+
+    let topPosition = "8";
+    if ($(window).width() <= "576") {
+        topPosition = "0"
+    }
     $('#about-details').animate({
-        top: "6%",
-        // opacity: "1"
+        top: topPosition + "%"
     }, 600);
+
+    $('.aboutme-my-pic').animate({
+        textIndent: 0
+    }, {
+        step: function () {
+            $(this).css("transform", "translateY(0%)");
+            $(this).css("transition", "1.5s");
+        }
+    });
+
+    let height = $('#about-details').height();
+    $('.overlay').css("height", height);
+    let bodyHeight = document.documentElement.scrollHeight + 100;
     $('.body-overlay').css("display", "block");
+    $('.body-overlay').css("height", bodyHeight);
 }
 
 // skills link
-$('#skill-link').click(skills);
+$('.nav-skill-link').click(skills);
 
 function skills() {
+    crossMobileMenu()
     rajDetails = true;
     screen = 1;
+    let topPosition = "8";
+    if ($(window).width() <= "576") {
+        topPosition = "0"
+    }
     $('#skills-details').animate({
-        top: "6%",
-        // opacity: "1"
+        top: topPosition + "%",
     }, 600);
 
     var tags = $('.skill-section');
@@ -58,20 +87,29 @@ function skills() {
         })
     });
 
+    let height = $('#skills-details').height();
+    $('.overlay').css("height", height);
+    let bodyHeight = document.documentElement.scrollHeight + 100;
     $('.body-overlay').css("display", "block");
+    $('.body-overlay').css("height", bodyHeight);
 }
 
 // experience link
-$('#experience-link').click(experience);
+$('.nav-experience-link').click(experience);
 
 function experience() {
+    crossMobileMenu();
     rajDetails = true;
     screen = 2;
+    let topPosition = "8";
+    if ($(window).width() <= "576") {
+        topPosition = "0"
+    }
+
     $('#experience-details').animate({
-        top: "6%",
+        top: topPosition + "%",
         // opacity: "1"
     }, 600);
-    $('.body-overlay').css("display", "block");
 
     $('.exp-left-section').animate({
         textIndent: 0
@@ -95,12 +133,18 @@ function experience() {
             $(this).css('opacity', '1');
         }
     });
+    let height = $('#experience-details').height();
+    $('.overlay').css("height", height);
+    let bodyHeight = document.documentElement.scrollHeight + 100;
+    $('.body-overlay').css("display", "block");
+    $('.body-overlay').css("height", bodyHeight);
 }
 
 // education link
-$('#education-link').click(education);
+$('.nav-education-link').click(education);
 
 function education() {
+    crossMobileMenu();
     rajDetails = true;
     screen = 3;
     $('.edu-year').animate({
@@ -122,26 +166,40 @@ function education() {
             $(this).css('transition-delay', '0.3s');
         }
     });
-
+    let topPosition = "8";
+    if ($(window).width() <= "576") {
+        topPosition = "0"
+    }
     $('#education-details').animate({
-        top: "6%",
+        top: topPosition + "%",
         // opacity: "1"
     }, 600);
+    let height = $('#education-details').height();
+    $('.overlay').css("height", height);
+    let bodyHeight = document.documentElement.scrollHeight + 100;
     $('.body-overlay').css("display", "block");
-
+    $('.body-overlay').css("height", bodyHeight);
 }
 
 // contact link
-$('#contact-link').click(contact);
+$('.nav-contact-link').click(contact);
 
 function contact() {
+    crossMobileMenu();
     rajDetails = true;
     screen = 4;
+    let topPosition = "8";
+    if($( window ).width() <= "576"){
+        topPosition = "0"
+    }
     $('#contact-details').animate({
-        top: "6%",
-        // opacity: "1"
+        top: topPosition+"%",
     }, 600);
+    let height = $('#contact-details').height();
+    $('.overlay').css("height", height);
+    let bodyHeight = document.documentElement.scrollHeight + 100;
     $('.body-overlay').css("display", "block");
+    $('.body-overlay').css("height", bodyHeight);
 }
 
 // conatct page
@@ -255,19 +313,27 @@ $('#contact-message').focusout(function () {
 
 // outerside click 
 $('.body-overlay').click(cross);
-
 $('.cross').click(cross);
 
 function cross() {
     rajDetails = false;
     screen = -1;
     $('.my-pic-about').animate({
-        top: "-120%"
+        top: "-200%"
     }, 600);
     $('#about-details').animate({
-        top: "-100%",
-        // opacity: "0"
+        top: "-200%",
     }, 600);
+
+    $('.aboutme-my-pic').animate({
+        textIndent: 0
+    }, {
+        step: function () {
+            $(this).css("transform", "translateY(-200%)");
+            $(this).css("transition", "1.5s");
+        }
+    });
+
 
     $('.body-overlay').animate({
         textIndent: 0
@@ -281,7 +347,7 @@ function cross() {
 
     // next
     $('#skills-details').animate({
-        top: "-100%",
+        top: "-200%",
         // opacity: "0"
     }, 600);
     var tags = $('.skill-section');
@@ -301,7 +367,7 @@ function cross() {
 
     // next
     $('#experience-details').animate({
-        top: "-120%",
+        top: "-200%",
         // opacity: "0"
     }, 600);
 
@@ -330,14 +396,14 @@ function cross() {
 
     // contact
     $('#contact-details').animate({
-        top: "-100%",
+        top: "-200%",
         // opacity: "0"
     }, 600);
     $('.body-overlay').css("display", "none");
 
     // education
     $('#education-details').animate({
-        top: "-100%",
+        top: "-200%",
         // opacity: "0"
     }, 600);
 
@@ -387,7 +453,18 @@ document.addEventListener("keyup", function (event) {
     }
 });
 
-// 
-function contactUs(){
-    alert("Your message is successfully delivered!");
+// mobile navigation click
+$('.mobile-nav-button .mobile-menu').click(function () {
+    $('.mobile-menu').css("display", "none");
+    $('.mobile-menu-cross').css("display", "block");
+    $('.mobile-nav').slideDown();
+});
+
+
+$('.mobile-menu-cross').click(crossMobileMenu);
+
+function crossMobileMenu() {
+    $('.mobile-nav').slideUp();
+    $('.mobile-menu-cross').css("display", "none");
+    $('.mobile-menu').css("display", "block");
 }
