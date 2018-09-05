@@ -49,16 +49,16 @@ body {
 }
 
 .loader {
-    margin-top: 237px;
+    margin-top: 15%;
     position: absolute;
     width: 100%;
     height: 100vh;
+    left: 45%;
 }
 
 .loader img {
     height: 100px;
     width: 100px;
-    margin-left: 45%;
 }
 
 #content {
@@ -136,7 +136,7 @@ body {
 }
 
 .mobile-nav-item {
-    text-align: center;
+    /* text-align: center; */
 }
 
 /* mobile navigation view end */
@@ -518,7 +518,7 @@ p.about-para {
         font-size: 20px;
     }
     .nav-link:hover {
-        color: black;
+        color: rgba(3, 26, 51, 0.726);
     }
     /* about us page */
     .my-pic-about:hover {
@@ -603,6 +603,10 @@ p.about-para {
 }
 
 @media screen and (min-width: 321px) and (max-width: 360px) {
+    .loader {
+        margin-top: 50%;
+        left: 35%;
+    }    
     .nav-item {
         display: none;
     }
@@ -630,7 +634,7 @@ p.about-para {
         width: 80%;
         margin: auto;
         margin-bottom: 40px;
-        font-size: 16px;
+        font-size: 15px;
         font-weight: 100;
     }
     table.about-details tr {
@@ -639,15 +643,33 @@ p.about-para {
     table.about-details tr td {
         border: 1px solid;
     }
-    p.about-para{
+    p.about-para {
         padding: 0 20px;
     }
-    .mydetails .right-section{
+    .mydetails .right-section {
         width: 94%;
         margin: auto;
     }
-    .map-address {        
+    .map-address {
         width: 95%;
         margin: auto;
-    }   
+    }
+    .mydetails h4 {
+        font-size: 30px;
+    }
+    .exp-right-section h4 {
+        font-size: 22px;
+    }
+    .edu-right-section h4 {
+        font-size: 22px;
+    }
+    .edu-left-section h2 {
+        font-size: 22px;
+    }
+    .mydetails .left-section {
+        margin: 32px 0;
+    }
+    .nav-link:hover {
+        color: rgba(3, 26, 51, 0.726);
+    }
 }

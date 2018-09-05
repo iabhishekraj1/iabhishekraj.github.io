@@ -1,6 +1,4 @@
 $(window).ready(function () {
-    // alert("height" + document.documentElement.scrollHeight);
-    // alert("width" + $( document ).width());
     setTimeout(function () {
         $('.loader').animate({
             textIndent: 0
@@ -10,7 +8,7 @@ $(window).ready(function () {
             }
         }, 6000);
         $('#content').fadeIn();
-    }, 1000)
+    }, 1000);
 });
 
 var rajDetails = false;
@@ -147,11 +145,18 @@ function education() {
     crossMobileMenu();
     rajDetails = true;
     screen = 3;
+    let rotate;
+    if ($(window).width() <= "360") {
+        rotate = 'rotate(-20deg) translateY(16px)';
+    }
+    else{
+        rotate = 'rotate(-20deg) translateY(40px)';
+    }
     $('.edu-year').animate({
         textIndent: 0
     }, {
         step: function () {
-            $(this).css('transform', 'rotate(-20deg) translateY(40px)');
+            $(this).css('transform', rotate);
             $(this).css('transition', '0.6s');
             $(this).css('transition-delay', '1s');
         }
@@ -189,11 +194,11 @@ function contact() {
     rajDetails = true;
     screen = 4;
     let topPosition = "8";
-    if($( window ).width() <= "576"){
+    if ($(window).width() <= "576") {
         topPosition = "0"
     }
     $('#contact-details').animate({
-        top: topPosition+"%",
+        top: topPosition + "%",
     }, 600);
     let height = $('#contact-details').height();
     $('.overlay').css("height", height);
