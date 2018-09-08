@@ -725,6 +725,7 @@ p.about-para {
 }
 
 @media screen and (max-width: 360px) {
+    
     .nav {
         display: none !important;
     }
@@ -748,7 +749,7 @@ p.about-para {
         text-align: center;
     }
     #my-pic img {
-        height: 80vh;
+        height: 93.5vh;        
         width: 100%;
     }
     .my-intro {
@@ -806,5 +807,12 @@ p.about-para {
     }
     .nav-link:hover {
         color: rgba(3, 26, 51, 0.726);
+    }
+    .eduexp {
+        margin-left: 0%;
+    }
+    .col-sm-8 {
+        flex: 0 0 100%;
+        max-width: 100%;
     }
 }
