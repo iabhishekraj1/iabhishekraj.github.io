@@ -358,7 +358,7 @@ function cross() {
 
     // next
     $('#skills-details').animate({
-        top: "-250%",
+        top: "-300%",
         opacity: "0"
     }, 1200);
     var tags = $('.skill-section');
