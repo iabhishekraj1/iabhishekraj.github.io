@@ -24,9 +24,10 @@
     background: gray;
 }
 
-body {
+body { 
+    /* #166896 */
     overflow-x: hidden;
-    background: #166896;
+    background: #0a4e78;    
     position: relative;
 }
 
@@ -62,7 +63,7 @@ body {
 }
 
 #content {
-    background: #166896;
+    background: #0a4e78;
 }
 
 .body-overlay {
@@ -509,6 +510,104 @@ p.about-para {
         font-size: 26px;
     }
 }
+@media screen and (max-width: 640px){
+    .nav-item {
+        display: none;
+    }
+    .mobile-nav {
+        width: 94%;
+        position: absolute;
+        z-index: 1;
+        background: rgba(0, 0, 0, 0.7);
+    }
+    #landing-page .col-sm-12 {
+        position: relative;
+    }
+    .mobile-nav-button {
+        display: block;
+    }
+    .nav-link {
+        font-size: 20px;
+    }
+    .nav-link:hover {
+        color: wheat;
+    }
+
+
+
+    /*  */
+
+    .my-pic-about:hover {
+        border: 1px solid gray;
+        transition: 0.8s;
+        transform: scale(1.05);
+        border-radius: 3px;
+    }
+    .col-sm-5 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .col-sm-7 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .mydetails .right-section {
+        margin-top: 0px;
+    }
+    .right-section h5 {
+        text-align: center;
+    }
+    .right-section .role {
+        text-align: center;
+        font-size: 18px;
+    }
+    table.about-details {
+        width: 80%;
+        margin: auto;
+        margin-bottom: 40px;
+    }
+    table.about-details tr {
+        box-shadow: 0px 0px 10px aquamarine;
+    }
+    table.about-details tr td {
+        border: 1px solid;
+    }
+    /* skills page */
+    .offset-sm-1 {
+        margin-left: 5%;
+    }
+    .skill-second-half {
+        margin-left: 5%;
+    }
+    .col-sm-4 {
+        flex: 0 0 90%;
+        max-width: 90%;
+    }
+    .col-sm-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .mydetails .left-section {
+        margin: 35px 0;
+    }
+    .map-address {
+        width: 90%;
+        margin: auto;
+    }
+    .contact-form {
+        width: 90%;
+        margin: auto;
+    }
+    #my-pic {
+        text-align: center;
+    }
+    .my-intro {
+        margin: 3em 0;
+        text-align: center;
+    }
+
+    /*  */
+}
 
 @media screen and (max-width: 576px) {
     .loader {
@@ -516,8 +615,7 @@ p.about-para {
         position: absolute;
         width: 100%;
         height: 100vh;
-        left: 43%;
-        /* z-index: 11; */
+        left: 43%;        
     }
     .nav-item {
         display: none;

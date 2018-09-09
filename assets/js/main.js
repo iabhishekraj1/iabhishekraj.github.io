@@ -29,10 +29,10 @@ function aboutme() {
     crossMobileMenu();
     rajDetails = true;
     screen = 0;
-    $('.my-pic-about').animate({
-        top: "-8%",
-        opacity: "1"
-    }, 400);
+    $('.aboutme-my-pic').animate({
+        top: "-8%"
+
+    }, 650);
 
     let topPosition = "8";
     if ($(window).width() <= "576") {
@@ -41,7 +41,7 @@ function aboutme() {
     $('#about-details').animate({
         top: topPosition + "%",
         opacity: "1"
-    }, 600);
+    }, 1200);
 
     $('.aboutme-my-pic').animate({
         textIndent: 0
@@ -118,7 +118,7 @@ function experience() {
         step: function () {
             $(this).css("transform", "translateX(0%)");
             $(this).css('transition', '0.6s');
-            $(this).css('transition-delay', '.5s');
+            $(this).css('transition-delay', '.8s');
             $(this).css('opacity', '1');
             $(this).css("transform", "rotateY(0deg)");
 
@@ -327,14 +327,13 @@ $('.cross').click(cross);
 function cross() {
     rajDetails = false;
     screen = -1;
-    $('.my-pic-about').animate({
-        top: "-215%",
-        opacity:"0"
-    }, 600);
+    $('.aboutme-my-pic').animate({
+        top: "-215%"        
+    }, 1200);
     $('#about-details').animate({
         top: "-215%",
         opacity:"0"
-    }, 600);
+    }, 1200);
 
     $('.aboutme-my-pic').animate({
         textIndent: 0
@@ -355,13 +354,13 @@ function cross() {
             $(this).css('transition', '0.6s');
             $(this).css('transition-delay', '1s');
         }
-    }, 1000);
+    }, 1200);
 
     // next
     $('#skills-details').animate({
         top: "-250%",
         opacity: "0"
-    }, 600);
+    }, 1200);
     var tags = $('.skill-section');
     $.each(tags, function (key, value) {
         $('.skill-section').eq(key).animate({
@@ -381,7 +380,7 @@ function cross() {
     $('#experience-details').animate({
         top: "-215%",
         opacity: "0"
-    }, 600);
+    }, 1200);
 
     // edu
     $('.exp-left-section').animate({
@@ -393,7 +392,7 @@ function cross() {
             $(this).css('transition-delay', '0.5s');
             $(this).css('opacity', '0');
         }
-    }, 1500);
+    }, 600);
     $('.exp-right-section').animate({
         textIndent: 0
     }, {
@@ -410,14 +409,14 @@ function cross() {
     $('#contact-details').animate({
         top: "-215%",
         opacity: "0"
-    }, 600);
+    }, 1200);
     $('.body-overlay').css("display", "none");
 
     // education
     $('#education-details').animate({
         top: "-215%",
         opacity: "0"
-    }, 600);
+    }, 1200);
 
     $('.edu-year').animate({
         textIndent: 0
@@ -438,12 +437,9 @@ function cross() {
         }
     });
     $('.body-overlay').css("display", "none");
-
 }
 
-
 // left and right arrrow button events
-
 document.addEventListener("keyup", function (event) {
     if (rajDetails && event.keyCode == 37) {
         if (screen == 0) {
