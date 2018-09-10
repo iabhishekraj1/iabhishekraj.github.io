@@ -69,7 +69,7 @@ body {
 .body-overlay {
     display: none;
     position: absolute;
-    height: 100vh;
+    /* height: 100vh; */
     width: 100%;
     background: rgba(0, 0, 0, 0.3);
     z-index: 1;
