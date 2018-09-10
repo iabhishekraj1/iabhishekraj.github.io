@@ -29,10 +29,10 @@ function aboutme() {
     crossMobileMenu();
     rajDetails = true;
     screen = 0;
-    $('.aboutme-my-pic').animate({
-        top: "-8%"
-
-    }, 650);
+    $('.my-pic-about').animate({
+        top: "-8%",
+        opacity: "1"
+    }, 400);
 
     let topPosition = "8";
     if ($(window).width() <= "576") {
@@ -41,7 +41,7 @@ function aboutme() {
     $('#about-details').animate({
         top: topPosition + "%",
         opacity: "1"
-    }, 1200);
+    }, 600);
 
     $('.aboutme-my-pic').animate({
         textIndent: 0
@@ -54,9 +54,7 @@ function aboutme() {
 
     let height = $('#about-details').height();
     $('.overlay').css("height", height);
-    let bodyHeight = document.documentElement.scrollHeight + 100;
-    $('.body-overlay').css("display", "block");
-    $('.body-overlay').css("height", bodyHeight);
+    bodyHeight();
 }
 
 // skills link
@@ -90,9 +88,7 @@ function skills() {
 
     let height = $('#skills-details').height();
     $('.overlay').css("height", height);
-    let bodyHeight = document.documentElement.scrollHeight + 100;
-    $('.body-overlay').css("display", "block");
-    $('.body-overlay').css("height", bodyHeight);
+    bodyHeight();
 }
 
 // experience link
@@ -118,7 +114,7 @@ function experience() {
         step: function () {
             $(this).css("transform", "translateX(0%)");
             $(this).css('transition', '0.6s');
-            $(this).css('transition-delay', '.8s');
+            $(this).css('transition-delay', '.5s');
             $(this).css('opacity', '1');
             $(this).css("transform", "rotateY(0deg)");
 
@@ -136,9 +132,7 @@ function experience() {
     });
     let height = $('#experience-details').height();
     $('.overlay').css("height", height);
-    let bodyHeight = document.documentElement.scrollHeight + 100;
-    $('.body-overlay').css("display", "block");
-    $('.body-overlay').css("height", bodyHeight);
+    bodyHeight();
 }
 
 // education link
@@ -184,9 +178,7 @@ function education() {
     }, 600);
     let height = $('#education-details').height();
     $('.overlay').css("height", height);
-    let bodyHeight = document.documentElement.scrollHeight + 100;
-    $('.body-overlay').css("display", "block");
-    $('.body-overlay').css("height", bodyHeight);
+    bodyHeight();
 }
 
 // contact link
@@ -206,9 +198,7 @@ function contact() {
     }, 600);
     let height = $('#contact-details').height();
     $('.overlay').css("height", height);
-    let bodyHeight = document.documentElement.scrollHeight + 100;
-    $('.body-overlay').css("display", "block");
-    $('.body-overlay').css("height", bodyHeight);
+    bodyHeight();
 }
 
 // conatct page
@@ -327,13 +317,14 @@ $('.cross').click(cross);
 function cross() {
     rajDetails = false;
     screen = -1;
-    $('.aboutme-my-pic').animate({
-        top: "-215%"        
-    }, 1200);
+    $('.my-pic-about').animate({
+        top: "-215%",
+        opacity:"0"
+    }, 600);
     $('#about-details').animate({
         top: "-215%",
         opacity:"0"
-    }, 1200);
+    }, 600);
 
     $('.aboutme-my-pic').animate({
         textIndent: 0
@@ -354,13 +345,13 @@ function cross() {
             $(this).css('transition', '0.6s');
             $(this).css('transition-delay', '1s');
         }
-    }, 1200);
+    }, 1000);
 
     // next
     $('#skills-details').animate({
-        top: "-300%",
+        top: "-250%",
         opacity: "0"
-    }, 1200);
+    }, 600);
     var tags = $('.skill-section');
     $.each(tags, function (key, value) {
         $('.skill-section').eq(key).animate({
@@ -380,7 +371,7 @@ function cross() {
     $('#experience-details').animate({
         top: "-215%",
         opacity: "0"
-    }, 1200);
+    }, 600);
 
     // edu
     $('.exp-left-section').animate({
@@ -392,7 +383,7 @@ function cross() {
             $(this).css('transition-delay', '0.5s');
             $(this).css('opacity', '0');
         }
-    }, 600);
+    }, 1500);
     $('.exp-right-section').animate({
         textIndent: 0
     }, {
@@ -409,14 +400,14 @@ function cross() {
     $('#contact-details').animate({
         top: "-215%",
         opacity: "0"
-    }, 1200);
+    }, 600);
     $('.body-overlay').css("display", "none");
 
     // education
     $('#education-details').animate({
         top: "-215%",
         opacity: "0"
-    }, 1200);
+    }, 600);
 
     $('.edu-year').animate({
         textIndent: 0
@@ -437,9 +428,12 @@ function cross() {
         }
     });
     $('.body-overlay').css("display", "none");
+
 }
 
+
 // left and right arrrow button events
+
 document.addEventListener("keyup", function (event) {
     if (rajDetails && event.keyCode == 37) {
         if (screen == 0) {
@@ -475,4 +469,10 @@ function crossMobileMenu() {
     $('.mobile-nav').slideUp();
     $('.mobile-menu-cross').css("display", "none");
     $('.mobile-menu').css("display", "block");
+}
+
+function bodyHeight(){
+    let bodyHeight = document.documentElement.scrollHeight + 100;
+    $('.body-overlay').css("display", "block");
+    $('.body-overlay').css("height", bodyHeight);
 }
