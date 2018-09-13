@@ -429,7 +429,7 @@ p.about-para {
 .exp-left-section {
     width: 30%;
     text-align: center;
-    opacity: 0;
+    /* opacity: 0; */
     transform: translateX(-100%);
 }
 
@@ -440,7 +440,7 @@ p.about-para {
     z-index: 10;
     background: rgba(255, 255, 255, 0.2);
     transform: translate3d(15em, 10em, 15em);
-    opacity: 0;
+    /* opacity: 0; */
 }
 
 .exp-right-section h4 {
