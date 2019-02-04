@@ -151,7 +151,7 @@ body {
 
 #my-pic img {
     height: 91.5vh;
-    min-width: 70%;
+    width: 70%;
 }
 
 .my-intro {
@@ -725,6 +725,10 @@ p.about-para {
     #my-pic {
         text-align: center;
     }
+    #my-pic img {
+        width: 90%;
+    }
+    
     #landing-page .col-sm-12 {
         position: relative;
     }
