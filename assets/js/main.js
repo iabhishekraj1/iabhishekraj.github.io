@@ -20,7 +20,7 @@ var functionEnum = {
     3: "experience",
     4: "contact"
 };
-var skillset = ["60", "70", "50", "60", "60", "70", "80", "80", "85", "50", "50", "50"];
+var skillset = ["60", "70", "50", "50", "60", "70", "80", "80", "85", "50", "50", "50"];
 
 // about me link
 $('.nav-about-link').click(aboutme);
