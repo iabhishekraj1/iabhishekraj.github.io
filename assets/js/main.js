@@ -16,11 +16,11 @@ var screen = -1;
 var functionEnum = {
     0: "aboutme",
     1: "skills",
-    2: "experience",
-    3: "education",
+    2: "education",
+    3: "experience",
     4: "contact"
 };
-var skillset = ["60", "70", "50", "60", "70", "70", "80", "70", "85", "70", "60", "60"];
+var skillset = ["60", "70", "50", "60", "60", "70", "80", "80", "85", "50", "50", "50"];
 
 // about me link
 $('.nav-about-link').click(aboutme);
@@ -97,7 +97,7 @@ $('.nav-experience-link').click(experience);
 function experience() {
     crossMobileMenu();
     rajDetails = true;
-    screen = 2;
+    screen = 3;
     let topPosition = "8";
     if ($(window).width() <= "576") {
         topPosition = "0"        
@@ -141,7 +141,7 @@ $('.nav-education-link').click(education);
 function education() {
     crossMobileMenu();
     rajDetails = true;
-    screen = 3;
+    screen = 2;
     let rotate;
     if ($(window).width() <= "360") {
         rotate = 'rotate(-20deg) translateY(16px)';
@@ -472,7 +472,7 @@ function crossMobileMenu() {
 }
 
 function bodyHeight(){
-    let bodyHeight = document.documentElement.scrollHeight + 100;
+    let bodyHeight = document.documentElement.scrollHeight + 0;
     $('.body-overlay').css("display", "block");
     $('.body-overlay').css("height", bodyHeight);
 }
