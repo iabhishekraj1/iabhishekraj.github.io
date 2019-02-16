@@ -109,7 +109,7 @@ body {
     display: inline-block;
     background: white;
     position: absolute;
-    right: 33px;
+    right: 2%;
     top: 4px;
     border-radius: 5px;
     cursor: pointer;
@@ -710,6 +710,9 @@ p.about-para {
 }
 
 @media screen and (max-width: 480px) {
+    .loader {    
+        left: 40%;
+    }
     .nav-item {
         display: none;
     }
