@@ -711,7 +711,7 @@ p.about-para {
 
 @media screen and (max-width: 480px) {
     .loader {    
-        left: 40%;
+        left: 38%;
     }
     .nav-item {
         display: none;
