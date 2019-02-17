@@ -486,8 +486,7 @@ p.about-para {
         z-index: 1;
         background: rgba(0, 0, 0, 0.7);
     }
-
-
+    
     #landing-page .col-sm-12 {
         position: relative;
     }
@@ -504,6 +503,16 @@ p.about-para {
         color: wheat;
     }
 
+    #my-pic img {
+        /* height: 500px; */
+    }
+    .my-intro {     
+        padding: 0em 1em;
+        margin: 66px 0 0;
+    }
+    .my-intro h2{
+        font-size: 30px;
+    }
 
     .eduexp {
         margin-left: 5%;
@@ -549,37 +558,6 @@ p.about-para {
 }
 
 @media screen and (max-width: 640px) {
-    .nav-item {
-        display: none;
-    }
-
-    .mobile-nav {
-        width: 94%;
-        position: absolute;
-        z-index: 1;
-        background: rgba(0, 0, 0, 0.7);
-    }
-
-    #landing-page .col-sm-12 {
-        position: relative;
-    }
-
-    .mobile-nav-button {
-        display: block;
-    }
-
-    .nav-link {
-        font-size: 20px;
-    }
-
-    .nav-link:hover {
-        color: wheat;
-    }
-
-
-
-    /*  */
-
     .my-pic-about:hover {
         border: 1px solid gray;
         transition: 0.8s;
@@ -817,8 +795,8 @@ p.about-para {
         text-align: center;
     }
 
-    #my-pic img {
-        width: 90%;
+    #my-pic img {        
+        width: 100%;        
     }
 
     #landing-page .col-sm-12 {
