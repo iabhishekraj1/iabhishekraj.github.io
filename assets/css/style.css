@@ -506,6 +506,10 @@ p.about-para {
     #my-pic img {
         /* height: 500px; */
     }
+    .container{
+        min-width: 1px;
+    }
+
     .my-intro {     
         padding: 0em 1em;
         margin: 66px 0 0;
