@@ -151,12 +151,13 @@ body {
 
 #my-pic img {
     height: 91.5vh;
-    width: 85%;
+    width: 95%;
 }
 
 .my-intro {
     margin: 10em 0;
-    padding: 4em 4em;
+    padding: 4em 0;
+    padding-left: 10em;
 }
 
 .my-intro h3 {
@@ -286,7 +287,7 @@ table.about-details tr td:last-child {
 
 p.about-para {
     text-align: justify;
-    color: white;    
+    color: white;
     font-family: 'Nanum Myeongjo', serif;
     padding: 0 40px;
     font-size: 24px;
@@ -470,8 +471,8 @@ p.about-para {
 
 @media screen and (max-width: 992px) {
     .my-intro {
-        margin: 10em 0;
-        padding: 0em 1em;
+        padding: 0em 0;
+        padding-left: 5em;
     }
 }
 
@@ -486,7 +487,7 @@ p.about-para {
         z-index: 1;
         background: rgba(0, 0, 0, 0.7);
     }
-    
+
     #landing-page .col-sm-12 {
         position: relative;
     }
@@ -503,18 +504,16 @@ p.about-para {
         color: wheat;
     }
 
-    #my-pic img {
-        /* height: 500px; */
-    }
-    .container{
+    .container {
         min-width: 1px;
     }
 
-    .my-intro {     
+    .my-intro {
         padding: 0em 1em;
         margin: 66px 0 0;
     }
-    .my-intro h2{
+
+    .my-intro h2 {
         font-size: 30px;
     }
 
@@ -799,8 +798,8 @@ p.about-para {
         text-align: center;
     }
 
-    #my-pic img {        
-        width: 100%;        
+    #my-pic img {
+        width: 100%;
     }
 
     #landing-page .col-sm-12 {
