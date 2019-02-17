@@ -826,15 +826,7 @@ p.about-para {
     .right-section .role {
         text-align: center;
         font-size: 18px;
-    }
-
-    table.about-details {
-        width: 80%;
-        margin: auto;
-        margin-bottom: 40px;
-        font-size: 15px;
-        font-weight: 100;
-    }
+    }    
 
     table.about-details tr {
         box-shadow: 0px 0px 10px aquamarine;
