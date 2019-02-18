@@ -24,12 +24,10 @@
     background: gray;
 }
 
-body {
-    /* #166896 */
-    overflow-x: hidden;
-    /* background: #0a4e78; */
-    position: relative;
-    background-image: url('../images/back.PNG');
+body {    
+    overflow-x: hidden;    
+    background: #2b3c59;
+    position: relative;    
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -65,9 +63,7 @@ body {
     width: 100px;
 }
 
-#content {
-    /* background: #0a4e78; */
-}
+
 
 .body-overlay {
     display: none;
