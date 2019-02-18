@@ -29,7 +29,7 @@ body {
     overflow-x: hidden;
     /* background: #0a4e78; */
     position: relative;
-    background-image: url('../images/back.png');
+    background-image: url('./../images/back.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
