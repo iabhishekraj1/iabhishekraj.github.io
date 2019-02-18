@@ -27,8 +27,11 @@
 body {
     /* #166896 */
     overflow-x: hidden;
-    background: #0a4e78;
+    /* background: #0a4e78; */
     position: relative;
+    background-image: url('../images/back.png');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .left {
@@ -63,7 +66,7 @@ body {
 }
 
 #content {
-    background: #0a4e78;
+    /* background: #0a4e78; */
 }
 
 .body-overlay {
@@ -826,7 +829,7 @@ p.about-para {
     .right-section .role {
         text-align: center;
         font-size: 18px;
-    }    
+    }
 
     table.about-details tr {
         box-shadow: 0px 0px 10px aquamarine;
