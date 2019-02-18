@@ -26,7 +26,8 @@
 
 body {    
     overflow-x: hidden;    
-    background: #2b3c59;
+    /* background: #2b3c59; */
+    background: #3a5077;
     position: relative;    
     background-repeat: no-repeat;
     background-size: cover;
