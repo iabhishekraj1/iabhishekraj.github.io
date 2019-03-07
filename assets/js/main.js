@@ -428,7 +428,6 @@ function cross() {
         }
     });
     $('.body-overlay').css("display", "none");
-
 }
 
 
@@ -467,7 +466,8 @@ $('.mobile-menu-cross').click(crossMobileMenu);
 
 function crossMobileMenu() {
     $('.mobile-nav').slideUp();
-    $('.mobile-menu-cross').css("display", "none");
+    $('.mobile-menu-cross').css("display", "none");    
+    // $('.other-data-details').css("z-index", "-100");
     $('.mobile-menu').css("display", "block");
 }
 
