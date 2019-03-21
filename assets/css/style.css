@@ -215,7 +215,7 @@ body {
 .mydetails {
     background: url(../images/back.jpg);
     padding-top: 22px;
-    padding-bottom: 22px;
+    padding-bottom: 30px;
 }
 
 .mydetails h4 {
@@ -260,8 +260,9 @@ body {
 
 p.role {
     padding-bottom: 12px;
-    border-bottom: 1px dashed white;
+    border-bottom: 1px solid white;
     font-family: Adobe Ming Std L;
+    width: 95%;
 }
 
 .mydetails .right-section h5 {
@@ -305,6 +306,7 @@ p.about-para {
     z-index: 2;
     overflow: hidden;
     border : 3px solid;
+    /* padding-bottom: 15px; */
 }
 
 .cross {
@@ -321,6 +323,7 @@ p.about-para {
 .bg {
     background: gray;
     width: 100%;
+    border-radius: 5px;
 }
 
 .skill-section {
@@ -333,7 +336,7 @@ p.about-para {
 .progress-bar-striped {
     background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
     background-size: 40px 40px;
-    height: 24px;
+    height: 10px;
     /* background-size: 40px 40px; */
 }
 
@@ -410,6 +413,7 @@ p.about-para {
     border: none;
     border-bottom: 1px solid white;
     color: #d0cfcf;
+    border-radius: 0;
 }
 
 .form-control:focus {
@@ -481,6 +485,8 @@ p.about-para {
 }
 
 @media screen and (max-width: 768px) {
+
+
     .nav-item {
         display: none;
     }
@@ -565,6 +571,7 @@ p.about-para {
 }
 
 @media screen and (max-width: 640px) {
+
     .my-pic-about:hover {
         border: 1px solid gray;
         transition: 0.8s;
@@ -651,7 +658,14 @@ p.about-para {
         text-align: center;
     }
 
-    /*  */
+    .form-control{
+        width: 100%;
+    }
+    .form-group{
+        /* width: 90%;
+        margin: auto;
+        margin-bottom: 40px; */
+    }    
 }
 
 @media screen and (max-width: 576px) {

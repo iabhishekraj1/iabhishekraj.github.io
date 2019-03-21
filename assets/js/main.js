@@ -1,4 +1,8 @@
 $(window).ready(function () {
+    let width = $(document).width();
+    if(width <= 1122){
+
+    }
     setTimeout(function () {
         $('.loader').animate({
             textIndent: 0
@@ -20,7 +24,7 @@ var functionEnum = {
     3: "experience",
     4: "contact"
 };
-var skillset = ["60", "70", "50", "50", "60", "70", "80", "80", "85", "50", "50", "50"];
+var skillset = ["60", "75", "50", "50", "60", "70", "80", "80", "85", "50", "50", "50"];
 
 // about me link
 $('.nav-about-link').click(aboutme);
@@ -34,12 +38,12 @@ function aboutme() {
         // opacity: "1"
     }, 400);
 
-    let topPosition = "8";
-    if ($(window).width() <= "576") {
+    let topPosition = "70";
+    if ($(window).width() <= "768") {
         topPosition = "0"
     }
     $('#about-details').animate({
-        top: topPosition + "%",
+        top: topPosition + "px",
         // opacity: "1"
     }, 800);
 
@@ -64,12 +68,12 @@ function skills() {
     crossMobileMenu()
     rajDetails = true;
     screen = 1;
-    let topPosition = "8";
-    if ($(window).width() <= "576") {
+    let topPosition = "70";
+    if ($(window).width() <= "768") {
         topPosition = "0"
     }
     $('#skills-details').animate({
-        top: topPosition + "%",
+        top: topPosition + "px",
         // opacity: "1"
     }, 800);
 
@@ -98,13 +102,13 @@ function experience() {
     crossMobileMenu();
     rajDetails = true;
     screen = 3;
-    let topPosition = "8";
-    if ($(window).width() <= "576") {
-        topPosition = "0"        
+    let topPosition = "70";
+    if ($(window).width() <= "768") {
+        topPosition = "0"
     }
 
     $('#experience-details').animate({
-        top: topPosition + "%",
+        top: topPosition + "px",
         // opacity: "1"
     }, 800);
 
@@ -145,8 +149,7 @@ function education() {
     let rotate;
     if ($(window).width() <= "360") {
         rotate = 'rotate(-20deg) translateY(16px)';
-    }
-    else{
+    } else {
         rotate = 'rotate(-20deg) translateY(40px)';
     }
     $('.edu-year').animate({
@@ -168,12 +171,12 @@ function education() {
             $(this).css('transition-delay', '0.3s');
         }
     });
-    let topPosition = "8";
-    if ($(window).width() <= "576") {
+    let topPosition = "70";
+    if ($(window).width() <= "768") {
         topPosition = "0"
     }
     $('#education-details').animate({
-        top: topPosition + "%",
+        top: topPosition + "px",
         // opacity: "1"
     }, 800);
     let height = $('#education-details').height();
@@ -188,12 +191,12 @@ function contact() {
     crossMobileMenu();
     rajDetails = true;
     screen = 4;
-    let topPosition = "8";
-    if ($(window).width() <= "576") {
+    let topPosition = "70";
+    if ($(window).width() <= "768") {
         topPosition = "0"
     }
     $('#contact-details').animate({
-        top: topPosition + "%",
+        top: topPosition + "px",
         // opacity: "1"
     }, 800);
     let height = $('#contact-details').height();
@@ -466,12 +469,12 @@ $('.mobile-menu-cross').click(crossMobileMenu);
 
 function crossMobileMenu() {
     $('.mobile-nav').slideUp();
-    $('.mobile-menu-cross').css("display", "none");    
+    $('.mobile-menu-cross').css("display", "none");
     // $('.other-data-details').css("z-index", "-100");
     $('.mobile-menu').css("display", "block");
 }
 
-function bodyHeight(){
+function bodyHeight() {
     let bodyHeight = document.documentElement.scrollHeight + 0;
     $('.body-overlay').css("display", "block");
     $('.body-overlay').css("height", bodyHeight);
